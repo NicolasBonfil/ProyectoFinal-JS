@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#total{
+    margin-left: 20px;
+    background-color: blue;
+    color: black;
+}
+
+#contenedorPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedorCancha{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#contenedorCancha img{
+    width: 60px;
+    height: 60px;
+}
+
+.botonJugador{
+    background-color: transparent;
+    border: none;
+}
+
+#arquero{
+    grid-area: arquero;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#defensorDerecho{
+    grid-area: defensorDerecho;
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+#defensorIzquierdo{
+    grid-area: defensorIzquierdo;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+#volanteDerecho{
+    grid-area: volanteDerecho;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#volanteCentral{
+    grid-area: volanteCentral;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#volanteIzquierdo{
+    grid-area: volanteIzquierdo;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#delantero{
+    grid-area: delantero;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#cancha{
+    display: grid;
+    background-color: green;
+    grid-template-areas:
+        "delantero delantero delantero"
+        "volanteIzquierdo volante volanteDerecho"
+        "defensorIzquierdo volanteCentral defensorDerecho"
+        "arquero arquero arquero";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 600px;
+    height: 900px;
+    row-gap: 60px;
+    background-image: url(./img/cancha-futbol-4.jpg);
+}
+
+#suplentes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 9px;
+    margin-top: 5px;
+    height: 890px;
+    width: 150px;
+    background: radial-gradient(circle at 81.9% 53.5%, rgb(173, 53, 53) 16.3%, rgb(240, 60, 60) 100.2%);
+    padding: 9px;
+}
+
+.jugador{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 22px;
+    font-family: "Anton";
+    color: black;
+}
+
+button{
+    padding: 5px
+}
+
+.divBotonSuplentes{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.mas{
+    position: absolute;
+    bottom: 3px;
+    left: 23.4px;
+}
