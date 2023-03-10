@@ -13,22 +13,24 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div id="contenedorPrincipal">
-        <button id = "eliminarEquipo" class="btn btn-danger">Eliminar Equipo</button>
-        <div id="contenedorCancha">
-            <div id = "cancha" class="cancha"></div>
-            <div id="suplentes">
-                <div class="divBotonSuplentes">
-                    <button id = "botonSuplente" class = "botonJugador">
-                        <img src = "./img/camiseta.png">
-                        <h2 class="mas">+</h2>
-                    </button>
+    <div id="caja">
+        <div id="contenedorPrincipal">
+            <button id = "eliminarEquipo" class="btn btn-danger">Eliminar Equipo</button>
+            <div id="contenedorCancha">
+                <div id = "cancha" class="cancha"></div>
+                <div id="suplentes">
+                    <div class="divBotonSuplentes">
+                        <button id = "botonSuplente" class = "botonJugador">
+                            <img src = "./img/camiseta.png">
+                            <p class="mas"><b>+</b></p>
+                        </button>
+                    </div>
+                    <div id="suplente"></div>
                 </div>
-                <div id="suplente"></div>
             </div>
         </div>
+        <div id="total"></div>
     </div>
-    <div id="total"></div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
