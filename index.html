@@ -14,22 +14,24 @@
 </head>
 <body>
     <div id="caja">
-        <div id="contenedorPrincipal">
-            <button id = "eliminarEquipo" class="btn btn-danger">Eliminar Equipo</button>
-            <div id="contenedorCancha">
+        <div id="contenedorPrincipal" class="row">
+            <div class = "eliminarEquipo">
+                <button id = "botonEliminarEquipo" class="btn btn-danger">Eliminar Equipo</button>
+            </div>
+
+            <div id="contenedorCancha" class="col">
                 <div id = "cancha" class="cancha"></div>
-                <div id="suplentes">
+                <div id="bancoSuplentes">
                     <div class="divBotonSuplentes">
                         <button id = "botonSuplente" class = "botonJugador">
                             <img src = "./img/camiseta.png">
-                            <p class="mas"><b>+</b></p>
                         </button>
+                        <p class="mas"><b>+</b></p>
                     </div>
                     <div id="suplente"></div>
                 </div>
             </div>
         </div>
-        <div id="total"></div>
     </div>
 
 

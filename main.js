@@ -1,7 +1,6 @@
 const cancha = document.getElementById("cancha");
 const botonSuplente = document.getElementById("botonSuplente");
 const suplente = document.getElementById("suplente")
-const total = document.getElementById("total");
 
 let jugadores = [];
 let numeros = [];
@@ -56,7 +55,7 @@ const crearCancha = () => {
 }
 
 
-const botonEliminarEquipo = document.getElementById("eliminarEquipo");
+const botonEliminarEquipo = document.getElementById("botonEliminarEquipo");
 botonEliminarEquipo.addEventListener("click", () => {
     eliminarEquipo();
     Toastify({
@@ -188,8 +187,6 @@ function imprimirJugadores(){
             }).showToast()
         })
     })
-
-    calcularTotal();
 }
 
 const eliminarJugador = (numeroBuscado) => {
@@ -210,22 +207,5 @@ const eliminarJugador = (numeroBuscado) => {
     crearCancha();
 }
 
-const calcularTotal = () => {
-    const criptoYa = "https://criptoya.com/api/dolar";
-    fetch(criptoYa)
-        .then(response => response.json())
-        .then(({blue, ccb, ccl, mep, oficial, solidario}) => {
-            total.innerHTML = `
-                                    <h2>El valor total del equipo es de: </h2>
-                                    <p>Dolar Oficial: ${valor * oficial}</p>
-                                    <p>Dolar Solidario: ${valor * solidario}</p>
-                                    <p>Dolar MEP: ${valor * mep}</p>
-                                    <p>Dolar CCL: ${valor *ccl}</p>
-                                    <p>Dolar CCB: ${valor * ccb}</p>
-                                    <p>Dolar Blue: ${valor * blue}</p>
-                                `
-        })
-        .catch(error => console.log(error));
-}
 
 crearCancha();

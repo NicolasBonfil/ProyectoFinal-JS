@@ -6,27 +6,22 @@
     box-sizing: border-box;
 }
 
-
-body{
-    height: 100vh;
-}
-
 #caja{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 100%;
 }
 
-#contenedorPrincipal{
+.eliminarEquipo{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
 }
 
 #contenedorCancha{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
 }
 
 #contenedorCancha img{
@@ -99,28 +94,30 @@ body{
     background-image: url(./img/cancha-futbol.jpeg);
 }
 
-#suplentes{
+#bancoSuplentes{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 440px;
+    flex-direction: row;
     align-items: center;
-    height: 760;
-    width: 150px;
     background: radial-gradient(circle at 81.9% 53.5%, rgb(173, 53, 53) 16.3%, rgb(240, 60, 60) 100.2%);
     padding: 9px;
 }
 
 .divBotonSuplentes{
     position: relative;
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 5px;
 }
 
 .mas{
     position: absolute;
-    top: 7.5px;
-    left: 12.75px;
     font-size: 20px;
+    top: 8.5px;
 }
 
 .botonJugador{
@@ -141,7 +138,7 @@ body{
     margin: 2px;
 }
 
-#suplentes .jugador{
+#bancoSuplentes .jugador{
     margin-top: 20.2px;
 }
 
@@ -150,9 +147,18 @@ body{
     font-size: 14px;
 }
 
-#total{
-    margin-left: 20px;
-    background-color: blue;
-    color: black;
-    padding: 15px;
+#suplente{
+    display: flex;
+}
+
+@media (max-width: 595px){
+    #cancha{
+        background-image: url("../img/cancha-futbol-2.jpeg");
+        width: 390px;
+        height: 585px;
+    }
+
+    #bancoSuplentes{
+        width: 390px;
+    }
 }
